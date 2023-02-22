@@ -37,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:{process.env.PORT||5000}/"
+  "proxy": "https://expensetracker-kbt0.onrender.com/"
 }
