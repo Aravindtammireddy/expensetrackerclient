@@ -13,7 +13,7 @@ import axios from 'axios';
 
      async function gettransactions(){
       try {
-         const res = await axios.get('https://expensetracker-kbt0.onrender.com/api/v1/transactions');
+         const res = await axios.get('/api/v1/transactions');
          dispatch ({
             type : "GET_TRANSACTIONS" ,
             payload: res.data
