@@ -13,7 +13,7 @@ import axios from 'axios';
 
      async function gettransactions(){
       try {
-         const res = await axios.get('/api/v1/transactions');
+         const res = await axios.get('https://expensetracker-kbt0.onrender.com/api/v1/transactions');
          dispatch ({
             type : "GET_TRANSACTIONS" ,
             payload: res.data
@@ -27,7 +27,7 @@ import axios from 'axios';
      async function delelteTransaction(_id){
       try {
          console.log(_id);
-         await axios.delete(`/api/v1/transactions/${_id}`);
+         await axios.delete(`https://expensetracker-kbt0.onrender.com/api/v1/transactions/${_id}`);
          dispatch({
             type : 'DELETE_TRANSACTION',
             payload : _id
@@ -40,7 +40,7 @@ import axios from 'axios';
      async function addTransaction(transaction){
       try {
         
-         await axios.post('/api/v1/transactions',transaction);
+         await axios.post('https://expensetracker-kbt0.onrender.com/api/v1/transactions',transaction);
          dispatch({
             type : 'ADD_TRANSACTION',
             payload : transaction
