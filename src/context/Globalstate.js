@@ -40,7 +40,7 @@ import axios from 'axios';
      async function addTransaction(transaction){
       try {
         
-         await axios.post(`/api/v1/transactions`,transaction);
+         await axios.post('/api/v1/transactions',transaction);
          dispatch({
             type : 'ADD_TRANSACTION',
             payload : transaction
